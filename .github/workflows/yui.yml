@@ -18,16 +18,16 @@ jobs:
          continue-on-error: true
          timeout-minutes: 100
          run: |
-              git config --global user.name "berkays0733"
+              git config --global user.name "linuxmobile"
               git config --global user.email "secrets.EMAILGIT"
               mkdir tmp && cd tmp
-              git clone https://github.com/berkays0733/Kurata-Yui Kurata-Yui
+              git clone https://github.com/linuxmobile/Kurata-Yui Kurata-Yui
 
        - name: Setup Erfan & Save Space
          continue-on-error: true
          timeout-minutes: 10
          run: |
-              git clone --recurse-submodules https://github.com/Velosh/ErfanGSIs-VelanGSIs ErfanGSIs
+              git clone --recurse-submodules https://github.com/linuxmobile/ErfanGSIs-VelanGSIs ErfanGSIs
               cd Erf*; sudo apt-get --fix-broken install -y; sudo bash setup.sh
               sudo rm -rf /usr/share/dotnet/
               sudo rm -rf "/usr/local/share/boost"
@@ -38,7 +38,7 @@ jobs:
          continue-on-error: true
          timeout-minutes: 10
          run: |
-              git clone https://github.com/berkays0733/linuxshitbot Bobo
+              git clone https://github.com/linuxmobile/linuxshitbot Bobo
               mv Bobo/*.jar .; rm -rf Bobo
               mv *.jar BoboBot.jar
 
@@ -59,9 +59,9 @@ jobs:
               echo "bot-username=linuxshitbot" >> "config.prop"
               echo "bot-master=677702936" >> "config.prop"
               echo "bot-sf-pass=${{ secrets.SF_PASS }}" >> sf-creds.config
-              echo "bot-sf-proj=berkay-gsi" >> sf-creds.config
-              echo "bot-sf-user=berkay-gsi" >> sf-creds.config
-              echo "bot-announcement-id=-1001178894412" >> sf-creds.config
+              echo "bot-sf-proj=linuxmobilegsis" >> sf-creds.config
+              echo "bot-sf-user=bdiez19" >> sf-creds.config
+              echo "bot-announcement-id=-582688967" >> sf-creds.config
               echo "bot-sf-host=frs.sourceforge.net" >> sf-creds.config
               echo "bot-send-announcement=true" >> sf-creds.config
               echo '["1263663104","1469015383","1032274246","1186205613","522458637","760404389","1179129272","968189873","678206065"]' >> allowed2port.json
