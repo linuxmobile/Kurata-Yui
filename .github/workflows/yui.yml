@@ -57,7 +57,7 @@ jobs:
               touch config.prop
               echo "bot-token=${{ secrets.TOKEN }}" >> "config.prop"
               echo "bot-username=linuxshitbot" >> "config.prop"
-              echo "bot-master=677702936" >> "config.prop"
+              echo "bot-master=1215852652" >> "config.prop"
               echo "bot-sf-pass=${{ secrets.SF_PASS }}" >> sf-creds.config
               echo "bot-sf-proj=linuxmobilegsis" >> sf-creds.config
               echo "bot-sf-user=bdiez19" >> sf-creds.config
